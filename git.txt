@@ -1,0 +1,52 @@
+Basic
+
+git init                                                        //add the folder for  version control
+
+git config --global user.name "name"                            //add  owner of changes 
+git config --global user.email  "mail@gmail.com"
+
+git status                                                                                                                               //to know about status
+
+git add .  / git add <filename>                                 //to add to staging directory
+
+git commit -m " message here"                                   //to add staged files as new version
+
+git log                                                         //to get info about all commits [ their commit id ,author name , date ]
+
+git diff /git diff --staged                                     //changes between 2 commits,2 branches and staging area vs  working directory
+
+git restore --stages                                            //empty the staging area
+
+git revert <commit -id >                                        //go to a commit using id
+
+git branch <branch name>                                        //to add a new branch but  Head doesn't change 
+
+git checkout -b <branch-name>                                   //to add a new branch also  Head  changes to the branch mentioned
+
+git checkout <branch-name>                                      //to got to  mentioned branch
+
+git checkout <commit-id>                                        //to move to a specific commit
+
+git reset <commit-id>                                           //to move the head to particular commit id
+
+git merge  <branch-name>                                        //merge branches
+
+
+Remote
+
+git remote add origin  <remote-URL>                             //to add local code to remote repo eg: bitbucket, git hub
+
+git remote                                                      //show the remote variable name
+
+git  push origin <branch-name>                                  //push changes to remote repo branch
+
+git  pull origin <branch-name>                                  //pull changes from remote repo branch
+
+git clone <URL>                                                 //downloads  files from existing files  i.e  Master/Main by default
+
+
+                                   ##NEVER DIRECTLY COMMIT TO MAIN/MASTER BRANCH##
+
+      AFTER  COMMITTING  TO A NON-MAIN/MASTER BRANCH , GIVE PULL  REQUEST  AND  AFTER APPROVAL  MERGE  TO  MASTER
+      ######################PULL REQUEST IN REMOTE  IS IDENTICAL TO  GIT MERGE IN LOCAL##########################
+      ############MERGING AFTER APPROVAL IS NOT A RULE BUT IS ONE AMONG THE BEST PRACTISES#######################
